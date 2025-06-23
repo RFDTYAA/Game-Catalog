@@ -1,0 +1,27 @@
+disabled_rules:
+  - line_length # Mematikan aturan panjang baris (berguna untuk URL API yang panjang)
+  - trailing_whitespace # Spasi di akhir baris tidak dianggap error
+
+opt_in_rules:
+  - empty_count # Sarankan menggunakan .isEmpty daripada .count == 0
+  - explicit_init # Sarankan menulis init() secara eksplisit
+  - fatal_error_message # Wajibkan pesan saat menggunakan fatalError()
+  - force_unwrapping # Beri peringatan saat menggunakan "!" untuk unwrap optional
+
+included:
+  - "Game Catalog 2"
+
+excluded:
+  - Pods
+  - Carthage
+  - "Game Catalog 2/Assets.xcassets"
+  - "Game Catalog 2/Preview Content"
+  - "Game Catalog 2/CoreData/FavoriteModel.xcdatamodeld"
+
+custom_rules:
+  no_print:
+    included: ".*\\.swift"
+    name: "Penggunaan Print Dilarang"
+    regex: "print\\("
+    message: "Gunakan logger atau metode debugging lain, bukan print()."
+    severity: warning # Tampilkan sebagai peringatan, bukan error
